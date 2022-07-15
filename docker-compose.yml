@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  integrador:
+    build:
+      context: ./
+    container_name: integrador
+    restart: always # # sempre que cair ele vai reiniciar 
+    ports:
+      - 3000:3000
+    command: /bin/sh
+    volumes:
+      - ./:/integrador # # ./ para /integrador 
